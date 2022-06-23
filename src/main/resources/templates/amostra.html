@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Lista de  </h1>
+        <table>
+                    <b>Quantidade de computadores: </b> <span th:text="${Dados.qtdEquip}"></span>
+                    <b>Quantidade de Notebooks: </b> <span th:text="${Dados.qtdNote}"></span>
+                    <td>
+                        <b>Custo pelos computadores: <span th:text="${Dados.resultCusto}"></span></b>
+                        <br>
+                        <br>
+                        <b>Gasto de Energia: <span th:text="${Dados.energiaTotal}"></span></b>
+                        <br>
+                        <br>
+                        <b>Novo custo total: <span th:text="${Dados.precoTotal}"></span></b>
+                        <br>
+                        <br>
+                        <b>Redução de preço: <span th:text="${Dados.resultPreco}"></span></b>
+                        <br>
+                        <br>
+                        <b>Redução de energia: <span th:text="${Dados.resultEnergia}"></span></b>
+                    </td>
+                    <br>
+                    <br>
+                </tr>
+            
+        </table>
+</body>
+</html>

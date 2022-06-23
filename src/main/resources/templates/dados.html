@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Coloque os Dados </h1>
+    <br>
+    <br>
+    <form th:action="@{/home/salvarcoleta}" method="POST">
+        <input type="number" name="qtdEquip" placeholder="Quantidade de computadores" autofocus/>
+        <input type="number" name="qtdNote" placeholder="Quantidade de Notebooks que pretende comprar" autofocus/>
+
+        <input type="submit" id="cadastro" value="Cadastrar"/>
+    </form>
+
+    <br>
+    <br>
+
+    <h2> Lista de  </h1>
+    <table>
+            <tr th:each="dado: ${Dados}">
+                <b>Relatório médio de custos: </b> 
+                <a th:href="@{'/home/amostra/' + ${dado.ID}}">Detalhes</a>
+                <br>
+                <br>
+            </tr>
+        
+    </table>
+</body>
+</html>
